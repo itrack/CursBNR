@@ -13,11 +13,6 @@
             "role": "Developer"
         }
     ],
-    "support": [
-        {
-            "issues": "https://github.com/itrack/CursBNR/issues",
-        }
-    ],
     "require": {
         "php": ">=5.2.0"
     },
