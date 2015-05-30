@@ -24,18 +24,18 @@ class CursBNR
      
      
     /**
-     * cursBnrXML class constructor
+     * Class constructor
      *
      * @access        public
      * @param         $url        string
      * @return        void
     */
-    function cursBnrXML($url = "http://www.bnr.ro/nbrfxrates.xml")
+    function __construct($url = "http://www.bnr.ro/nbrfxrates.xml")
     {
         $this->xmlDocument = file_get_contents($url);
         $this->parseXMLDocument();
     }
-     
+
     /**
      * parseXMLDocument method
      *
