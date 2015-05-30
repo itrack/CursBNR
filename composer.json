@@ -1,5 +1,5 @@
 {
-    "name": "itrack/CursBNR",
+    "name": "itrack/cursbnr",
     "version": "1.0.0",
     "type": "library",
     "description": "Librarie PHP pentru preluarea cursului valutar din Romania",
