@@ -1,0 +1,27 @@
+{
+    "name": "itrack/CursBNR",
+    "version": "1.0.0",
+    "type": "library",
+    "description": "Librarie PHP pentru preluarea cursului valutar din Romania",
+    "keywords": ["curs valutar","bnr", "curs bnr"],
+    "homepage": "https://github.com/itrack/CursBNR",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Under Shadow",
+            "homepage": "https://github.com/itrack",
+            "role": "Developer"
+        }
+    ],
+    "support": [
+        {
+            "issues": "https://github.com/itrack/CursBNR/issues",
+        }
+    ],
+    "require": {
+        "php": ">=5.2.0"
+    },
+    "autoload": {
+        "classmap": ["src/"]
+    }
+}
