@@ -5,7 +5,7 @@ class CursBNR
      * xml document
      * @var string
      */
-    var $xmlDocument = "";
+    private $xmlDocument = "";
      
      
     /**
@@ -13,14 +13,14 @@ class CursBNR
      * BNR date format is Y-m-d
      * @var string
      */
-    var $date = "";
+    private $date = "";
      
      
     /**
      * currency
      * @var associative array
      */
-    var $currency = array();
+    private $currency = array();
      
      
     /**
@@ -39,10 +39,10 @@ class CursBNR
     /**
      * parseXMLDocument method
      *
-     * @access        public
+     * @access        private
      * @return         void
      */
-    function parseXMLDocument()
+    private function parseXMLDocument()
     {
         $xml = new SimpleXMLElement($this->xmlDocument);
          
@@ -62,13 +62,13 @@ class CursBNR
      * @access        public
      * @return         double
      */
-    function getCurs($currency)
+    public function getCurs($currency)
     {
         foreach($this->currency as $line)
         {
             if($line["name"]==$currency)
             {
-                return $line["value"];
+                return (float)$line["value"];
             }
         }
 
