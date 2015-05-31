@@ -1,6 +1,6 @@
 {
     "name": "itrack/cursbnr",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "type": "library",
     "description": "Librarie PHP pentru preluarea cursului valutar din Romania",
     "keywords": ["curs valutar","bnr", "curs bnr"],
