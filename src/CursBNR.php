@@ -32,7 +32,10 @@ class CursBNR
     */
     function __construct($url = "http://www.bnr.ro/nbrfxrates.xml")
     {
-        $this->xmlDocument = file_get_contents($url);
+        if(($this->xmlDocument = @file_get_contents($url)) === false){
+            throw new Exception('Connection error');
+        }
+
         $this->parseXMLDocument();
     }
 
@@ -44,7 +47,11 @@ class CursBNR
      */
     private function parseXMLDocument()
     {
-        $xml = new SimpleXMLElement($this->xmlDocument);
+        try{
+            $xml = @new SimpleXMLElement($this->xmlDocument);
+        }catch (Exception $e){
+            throw new Exception("BNR response is wrong");
+        }
          
         $this->date=$xml->Header->PublishingDate;
          
@@ -72,6 +79,6 @@ class CursBNR
             }
         }
 
-        return "Incorrect currency!";
+        throw new Exception('Incorrect currency!');
     }
 }
